@@ -67,8 +67,8 @@ document.getElementById('promocode-submit').addEventListener('click', function()
     const footerTotalDisplay = document.getElementById('footer-total');
     if(promoInput.value == 'stevekaku')
     {
-        totalCost.innerText =parseFloat(totalCost.innerText)-(parseFloat(totalCost.innerText) * 20) / 100;
-        footerTotalDisplay.innerText = totalCost.innerText;
+        footerTotalDisplay.innerText =parseFloat(totalCost.innerText)-(parseFloat(totalCost.innerText) * 20) / 100;
+        
     }
     promoInput.value = '';
 });
