@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy MacBook Pro</title>
+    <!-- linking with tailwind css -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="w-8/12 mx-auto mt-8 font-sans">
+<body class="w-8/12 mx-auto mt-8 font-sans md:w-32">
     <main>
+        <!-- divinding main section into two columns -->
         <div class="grid grid-cols-2 gap-14">
             <div class="">
                 <img class="object-right" style="float:right; width:500px; height: 450px;" src="images/mac.png" alt="iMac Image">
@@ -25,19 +27,19 @@
                     <div>
                         <div class="mt-8">
                             <h3 class="font-bold text-xl">Memory</h3>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">8GB unified memory</button>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">16GB unified memory</button>
+                            <button id="memory-8gb" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">8GB unified memory</button>
+                            <button id="memory-16gb" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">16GB unified memory</button>
                         </div>
                         <div class="mt-8">
                             <h3 class="font-bold text-xl">Storage</h3>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">256GB SSD storage</button>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">512GB SSD storage</button>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">1TB SSD storage</button>
+                            <button id="storage-256gb" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">256GB SSD storage</button>
+                            <button id="storage-512gb" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">512GB SSD storage</button>
+                            <button id="storage-1tb" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">1TB SSD storage</button>
                         </div>
                         <div class="mt-8">
                             <h3 class="font-bold text-xl">Choose your delivery option</h3>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">Friday, Aug 25 Free Prime Delivery</button>
-                            <button class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">Friday, Aug 21 Delivery charge $20</button>
+                            <button id="free-delivery" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">Friday, Aug 25 Free Prime Delivery</button>
+                            <button id="charged-delivery" class="border-2 border-gray-300 rounded p-2 hover:bg-black hover:text-white mt-4">Friday, Aug 21 Delivery charge $20</button>
                         </div>
                     </div>
                 </section>
@@ -52,17 +54,17 @@
                         </div>
                         <div class="space-y-6 divide-y-2 ">
                             <h3 class="font-bold text-xl">$1299</h3>
-                            <h3 class="font-bold text-xl">$0</h3>
-                            <h3 class="font-bold text-xl">$0</h3>
-                            <h3 class="font-bold text-xl">$0</h3>
-                            <h3 class=" font-bold text-xl">$1299</h3>
+                            <h3 class="font-bold text-xl">$<span id="memory-cost">0</span></h3>
+                            <h3 class="font-bold text-xl">$<span id="storage-cost">0</span></h3>
+                            <h3 class="font-bold text-xl">$<span id="delivery-cost">0</span></h3>
+                            <h3 class="font-bold text-xl">$<span id="total-price">1299</span></h3>
                         </div>
     
                     </div>
                     <div class="mt-16">
                         <h3 class=" font-semibold text-xl">Add Promo Code</h3>
-                        <input class="mt-4 border-2 border-gray-300 px-4 py-2 rounded" type="text" name="" id="" placeholder="voucher">
-                        <button class="border-2 rounded-lg bg-red-500 text-white font-semibold px-4 py-2 hover:bg-red-700 mb-16">Apply</button>
+                        <input id="promo-input" class="mt-4 border-2 border-gray-300 px-4 py-2 rounded" type="text">
+                        <button id="promocode-submit" class="border-2 rounded-lg bg-red-500 text-white font-semibold px-4 py-2 hover:bg-red-700 mb-16">Apply</button>
                     </div>
                 </section>
             </div>
@@ -70,8 +72,8 @@
     </main>
     <footer>
         <hr class="border-3 border-gray-500">
-        <h3 class="text-5xl text-center mb-16 mt-6">Total: $1299</h3>
+        <h3 class="text-5xl text-center mb-16 mt-6">Total: $<span id="footer-total">1299</span></h3>
     </footer>
-
+    <script src="js/app.js"></script>
 </body>
 </html>
